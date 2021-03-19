@@ -21,7 +21,7 @@ Next, I wanted some descriptive statistics. I started with the central tendencie
 
 I also took those data points for how much was pledged for successful and failed US kickstarters. The successful campagins' data points for pledged line up closely with the goal, showing that they were able to get just enough people to pledge to reach their goal. For failed campagins, the pledged amounts were significantly lower. This shows that most failed campaigns are not even close to reaching their goal. 
 
-*insert table clip*
+![Descriptive Statistics](https://github.com/caseykotowski/Kickstarter-Analysis/blob/main/Descriptive%20Statistics%20Capture.png "Descriptive Stats-All US")
 
 Digging in a little deeper, and for the play subcategory specifically, I pitted successful, failed, and canceled play campaigns against each other by goal ranges. 
 To do this, I used the `COUNTIFS` function, and created a line graph to visualize outcomes by goal range. 
@@ -31,8 +31,8 @@ To do this, I used the `COUNTIFS` function, and created a line graph to visualiz
 ### Analysis of Outcomes Based on Launch Date
 Now that we understand that it's possible to be successful in fundraising for a play, I wanted to see if there are any other variables that increase success. We have the data for when campagins are started, so I sorted by date. Looking at the below chart time of year is correlated to success in plays, and it shows that the summer months are the most common time of year to start theater campaigns and the most common time of year for successes. Specifically, May is the most successful month. As for months to avoid, failed theater campaings peak in October. If Louise wants to maximize her chances at success, she should avoid starting in October and wait for May - even if that's well before she wants to begin production. 
 
-*insert challenge version of the image*
-![Campagin Outcomes by Month](https://github.com/caseykotowski/Kickstarter-Analysis/blob/main/Kickstarter%20Outcomes%20by%20Month.png "Outcomes for Plays by Month")
+
+![Theater Outcomes by Launch Date](https://github.com/caseykotowski/Kickstarter-Analysis/blob/main/Resources/Theater_Outcomes_vs_Launch.png "Outcomes by Launch Date")
 
 
 ### Analysis of Outcomes Based on Goals
@@ -47,18 +47,13 @@ After double checking my code by hand counting some of the goal ranges, I was co
 
 I summed for total projects in the range, and took the percentages, I then converted the data into a line chart that shows which outcome dominates the different goal ranges. 
 
-*insert image*
+![Outcomes by Goals](https://github.com/caseykotowski/Kickstarter-Analysis/blob/main/Resources/Outcomes_vs_Goals.png "Outcomes by Launch Date")
 
 The outcomes occilate between ranges, but under $15,000 play campagins are more often success than failures. This was an interesting result to me, because when analyzing all of the US kickstarters, the average successful goal was around $5,000.
 
 ### Challenges and Difficulties Encountered
 
 The `COUNTIFS` function was my greatest challenge. I understood they syntax of listing the range the function would look at, and then the criteria for counting (and then repeating for all of the criteria I wanted applied), but understanding exactly how to count the range was difficult. It took several tries to count all of data points in between each goal value. I made sure to use the greater than **or equal to** and the less than **or equal to** to capture all of the points. I initially wanted the whole range in one criteria, but I finally understoon I could use two criteria and both filters would apply to the count. Then I had to add in all of the other filters. Remembering to filter by subcategory and by country led to a chart that looked very different from the checkpoint listed in the challenge instructions. 
-
-
-### Other Interests
-My fictional client was also interested in British musicals, so I created a Box and Whisker chart to quickly show some stats. Her goal of £4,000 is incredibly close to the mean, which is much higher than the median (there are some outliers present), so again it's a lofty goal. The mean amount pledged - regardless of outcome - is much lower than the mean for goals. 
-![British Musical Funding](https://github.com/caseykotowski/Kickstarter-Analysis/blob/main/British%20Musicals%20Box%20and%20Whisker%20Chart.png "British Musicals")
 
 
 ## Results
